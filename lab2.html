@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;500;700&display=swap" rel="stylesheet">
+	<link href="css/style_lab2.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
+	<title>Laboratório 2</title>
+</head>
+<body>
+
+	<div class="parent">
+
+	<div class="sidebar">
+
+		<div class="sidebar-pos">
+
+			<div class="img-sidebar">
+				<img src="img/lab2/Logo.png">
+			</div>
+
+			<div class="menu">
+				<a class="selected" href="lab2.html">LABORATÓRIO 2</a>
+				<a href='index.html'><i class="fas fa-backspace"></i>             Página Inicial</a>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="content">
+		<audio src=Final/audio/audio_descricao.ogg controls autoplay></audio>
+		<br>
+		<section class="descricao">
+			<h2>Imagem e Captura de <span>Vídeo</span></h2>
+			<h3>Codificação de Sinais Multimídia - Laboratório 2</h3>
+			<p>Primeiramente, os trabalhos com o Google Colab e o OpenCV, Notebook foram iniciados. Com isso, foi possível visualizar e alterar as resoluções das imagens, assim como, gravar imagem e vídeo pelo Colab.
+			<b>Na foto a seguir, temos os integrantes que compõem o GRUPO:</b></p>
+			<p>
+
+			<div class="img-avatar">
+				<img src="Colab Notebooks/grupo4.jpg">
+			
+			<a href='index.html' text-align: center>Quer nos conhecer um pouco? Clique aqui</a><p>
+			</div>
+
+		</section>
+
+		<section class="-descricao">
+			<br>
+			
+			<h2><span>Foto-Montagem:</span> AVATAR</h2>
+
+			<div class="img-avatar">
+				<img src="Colab Notebooks/grupo4_avatar.jpg"></img>
+				<p><i><b>Trevor: </b>Matheus; <br><b>Patrick Estrela:</b> Mayara; <br><b>Perry:</b> Samya; <br><b>Makoto:</b> Caíque</i></p>
+			</div>
+			<p>
+			<hr>
+		</section>
+
+		
+		<section class="descricao2">
+			
+			<h2>Processamento Básico nas <span>Imagens e Vídeos</span></h2>
+			
+			<div class="series">
+				<p><b>Imagens Originais</b></p>
+				<br> 
+				<img src="Final/Grupo4_Original.jpg"></img>
+				<p>
+				<img src="Final/Grupo4_avatar_Original.jpg"></img>
+				<p>
+				<hr>
+			</div>
+
+		</section>
+
+		<section class="descricao2">
+			
+			<div class="series">
+				<p><b>Versões em P&B</b></p>
+				<p>
+				<img src="Final/Grupo4_P_B.png"></img>
+				<p>
+					<img src="Final/Grupo4_Avatar_P_B.png"></img>
+				</p>
+
+				<p>Para obter e visualizar as imagens na versão P&B, o seguinte código foi aplicado:</p>
+				<br>
+				<h3>img_gray = cv.imread(os.path.join(image_path,'grupo4.jpg'), cv.IMREAD_GRAYSCALE)</h3>
+
+
+			</div>
+			<p>
+			<hr>
+
+		</section>
+
+
+		<section class="descricao2">
+			<p>
+			<br>
+			
+			<div class="series">
+				<p><b>Imagens com duas resoluções diferentes:</b></p>
+				<p> 
+				<img src="Final/Grupo4_P_B_Resolução++.png"></img>
+				<p>
+					<img src="Final/Grupo4_Avatar_P_B_resolução++.png"></img>
+				</p>
+
+			</div>
+			<br>
+			<h3>Nesta etapa, foi utilizado o resize() do OpenCV para mudar a resolução das nossas imagens P&B. <i>Os seguintes parâmetros foram aplicados: fx=0.80, fy=0.80</i></h3>
+
+			<p>
+			<br>
+			<hr>
+
+		</section>
+
+
+		<section class="descricao2">
+			<br>	
+			<div class="series">
+				<p><b>Resolução dos Vídeos: 25% dos originais</b></p>
+					<br>
+					<video src="Final/videos/video.mp4" width="480" controls autoplay></video>
+				<p>
+					<video src="Final/videos/video_samya.mp4" width="160" controls autoplay></video>
+				</p>
+
+			</div>
+
+			<br>	
+			<div class="series">
+				<p><b>Resolução dos Vídeos: 50% dos originais</b></p>
+					<br>
+					<video src="Final/videos/video.mp4" width="960" controls autoplay></video>
+				<p>
+					<video src="Final/videos/video_samya.mp4" width="320" controls autoplay></video>
+				</p>
+
+				
+			</div>
+
+			<p>
+			<h3>Para obter e visualizar os vídeos com as resoluções desejadas, foi necessário importar as bibliotecas e especificar o caminho para acesso do vídeo original em <i>“video_path”</i>. Feito isso, utilizamos o HTML para a exibição no Colab.</h3>
+			<p>
+				<p>Para mais detalhes sobre o código, clique no link da próxima seção.</p>
+			</p>
+			<hr>
+
+
+		</section>
+
+
+		<section class="doc">
+			<h2>Link do Notebook<span> - (PARTE 3)</span></h2>
+			<div class="img-avatar">
+			<p>	
+			<br>
+			<a href='https://colab.research.google.com/drive/1Y65QmS8OO391KJTRGsgrorsxYt5Uswt2' text-align: center>Clique aqui para o acesso</a><p>
+			</div>
+			<br>
+			<p>
+			
+			<section class="descricao2">
+			<p>
+			<br>
+			<hr>
+			
+			<div class="series">
+				<p><b>Imagem EXTRA: Leitura com cores trocadas</b></p>
+				<p> 
+				<img src="Final/cores_trocadas.png"></img>
+				</p>
+				<h3>Fazendo todo o processo descrito anteriormente, o opencv (cv) com o imread() lê as cores trocadas. Para encontrar mais detalhes sobre do código, acesse o link apresentado anteriormente.</h3>
+				<p>
+				<h3><i>img = cv.imread(os.path.join(image_path,'grupo4.jpg'),cv.IMREAD_COLOR)</i></h3>
+
+			</div>
+
+			<p>
+
+		</section>
+	</section>
+
+
+	</div>
+
+</div>
+
+</body>
+</html>

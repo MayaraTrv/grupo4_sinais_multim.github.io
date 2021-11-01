@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;500;700&display=swap" rel="stylesheet">
+	<link href="css/style_lab4.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
+	<title>Laboratório 4</title>
+</head>
+<body>
+
+	<div class="parent">
+
+	<div class="sidebar">
+
+		<div class="sidebar-pos">
+
+			<div class="img-sidebar">
+				<img src="img/lab2/Logo.png">
+			</div>
+
+			<div class="menu">
+				<a class="selected" href="lab4.html">LABORATÓRIO 4</a>
+				<a href='https://colab.research.google.com/drive/1e1Ww4UGs_8yBdehwelgBX_NuAY2XyTZh'>Link Notebook</a>
+				<a href='index.html'><i class="fas fa-backspace"></i>             Página Inicial</a>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="content">
+		<br>
+
+		<br>
+		<br>
+		<section class="descricao">
+			<br>
+			<br>
+			<audio src=lab4/audios/audio1.ogg controls autoplay></audio>
+			<br>
+			<h2>Codificação de Imagem com <span>DWT</span></h2>
+			<h3>Codificação de Sinais Multimídia - Laboratório 4</h3>
+			<p>
+				Primeiramente, os trabalhos com o Google Colab e o OpenCV, Notebook foram iniciados. Entre os principais objetivos temos: Efetuar a Codificação de Imagem e a Decodificação por DWT e IDWT; Testar funções de Codificação Multinível e por fim, verificar a taxa de compressão só com a Componente de Aproximação.
+			</p>
+			<hr>
+
+		</section>
+
+		
+		<section class="descricao2">
+			<audio src=lab4/audios/audio2.ogg controls autoplay></audio>
+			
+			<h2>Codificação de Luminância (P&B) <span>com DWT</span></h2>
+			<br>
+			<div class="series">
+
+				<h3>Para gerar as imagens desta seção, foi aplicado o seguinte código: <br><br>---------------------------------------
+				<br>coefs2 = pywt.dwt2(img_gray,'haar', mode='periodization')  #1 nível de DWT 
+				<br>(cA, (cH, cV, cD)) = coefs2 #Para separar os coeficientes
+				<br>imgr = pywt.idwt2(coefs2, 'haar', mode = 'periodization')  #1 nível de IDWT
+				<br>---------------------------------------</h3>
+
+				<br>
+				<p><b>Matheus</b></p>
+				<img src="lab4/foto1.png"></img>
+				<br>
+				<p><b>Sâmya</b></p>
+				<img src="lab4/foto2.png"></img>
+				<br>
+				<p><b>Mayara</b></p>
+				<img src="lab4/foto3.png"></img>
+				<br>
+				<p><b>Caíque</b></p>
+				<img src="lab4/foto4.png"></img>
+				<br>
+			</div>
+			<p>
+			<hr>
+		</section>
+
+		<section class="descricao2">
+			<br>
+			<audio src=lab4/audios/audio3.ogg controls autoplay></audio>
+			<h2>Cálculo do Erro Quadrático Médio (MSE) e da<span> Relação Sinal Ruído de Pico (PSNR)</span></h2>
+			<br>
+			<div class="series">
+
+				<h3>Nesta etapa, é importante ressaltar o que é e como se obtém o MSE. A MSE é obtida calculando somando-se o erro quadrático de reconstrução pixel a pixel entre a Imagem Original (O) da Reconstruída (R) e normalizando pela dimensão (LxA) da imagem:</h3>
+				<br>
+				<img src="lab4/formula.jpg"></img>
+				<h3>A SNR de pico (PSNR) é definida para cada plano componente da imagem</h3>
+				<br>
+				<img src="lab4/formula1.jpg"></img>
+				<br>
+				<p><b>Matheus</b></p>
+				<h3>MSE_Y = 5.77e-25<br>
+				PSNR_Luma = 290.52 dB</h3>
+				<img src="lab4/foto5.png"></img>
+				<br>
+				<p><b>Sâmya</b></p>
+				<h3>MSE_Y = 4.17e-25<br>
+				PSNR_Luma = 291.93 dB</h3>
+				<img src="lab4/foto6.png"></img>
+				<br>
+				<p><b>Mayara</b></p>
+				<h3>MSE_Y = 1.03e-25<br>
+				PSNR_Luma = 298.01 dB</h3>
+				<img src="lab4/foto7.png"></img>
+				<br>
+				<p><b>Caíque</b></p>
+				<h3>MSE_Y = 5.34e-25<br>
+				PSNR_Luma = 290.85 dB</h3>
+				<img src="lab4/foto8.png"></img>
+				<br>
+			</div>
+			<p>
+			<hr>
+		</section>
+
+		<section class="descricao2">
+			<br>
+			<audio src=lab4/audios/audio4.ogg controls autoplay></audio>
+			<h2>Teste das Funções de Multiresolução <span>wavedec2() e waverec2()</span></h2>
+			<br>
+			<div class="series">
+
+				<h3>Nesta seção, foram considerados dois níveis de decomposição DWT e dois níveis de IDWT. Em seguida, os coeficientes de cada nível foram extraidos e plotados (para mais detalhes do código, acesse o link com o Notebook)</h3>
+				<br>
+				<div class="series1">
+					<p><b>Matheus e Sâmya</b></p>
+					<img src="lab4/foto9.png"></img>
+					<img src="lab4/foto10.png"></img>
+					
+					<p><b>Mayara e Caíque</b></p>
+					<img src="lab4/foto11.png"></img>
+					<img src="lab4/foto12.png"></img>
+				</div>
+				<br>
+			</div>
+			<p>
+			<hr>
+		</section>
+
+		<section class="descricao2">
+			<br>
+			<audio src=lab4/audios/audio5.ogg controls autoplay></audio>
+			<h2>"Montagem" com <span>wavedec2() e wavedecn()</span></h2>
+			
+			<div class="series">
+
+				<br>
+				<p><b>Matheus</b></p>
+				<img src="lab4/foto13.png" width="900"></img>
+				<br>
+				<p><b>Sâmya</b></p>
+				<img src="lab4/foto14.png" width="900"></img>
+				<br>
+				<p><b>Mayara</b></p>
+				<img src="lab4/foto15.png" width="900"></img>
+				<br>
+				<p><b>Caíque</b></p>
+				<img src="lab4/foto16.png" width="900"></img>
+				<br>
+			</div>
+			<p>
+			<hr>
+		</section>
+
+		<section class="descricao2">
+			<br>
+			<audio src=lab4/audios/audio6.ogg controls autoplay></audio>
+			<h2>Teste das Funções de Multiresolução <span>wavedec2() e waverec2()</span></h2>
+			<br>
+			<div class="series">
+
+				<h3>Nesta seção, foi realizada a codificação por planos de cores (Vermelho, Verde e Azul). Foram considerados os níveis 1 de DWT e IDWT. Além disso, os coeficientes foram separados. Houve a reconstrução de imagem colorida para integrante do grupo. (para mais detalhes do código, acesse o link com o Notebook)</h3>
+				<br>
+				<p><b>Matheus</b></p>
+				<img src="lab4/foto17.png" width="700"></img>
+				<img src="lab4/foto18.png" width="700"></img>
+				<img src="lab4/foto19.png" width="700"></img>
+				<img src="lab4/foto20.png" width="700"></img>
+				<img src="lab4/foto21.png" width="700"></img>
+				<br>
+				<p><b>Sâmya</b></p>
+				<img src="lab4/foto22.png" width="700"></img>
+				<img src="lab4/foto23.png" width="700"></img>
+				<img src="lab4/foto24.png" width="700"></img>
+				<img src="lab4/foto25.png" width="700"></img>
+				<img src="lab4/foto26.png" width="700"></img>
+				<img src="lab4/foto27.png" width="700"></img>
+				<br>
+				<p><b>Mayara</b></p>
+				<img src="lab4/foto28.png" width="700"></img>
+				<img src="lab4/foto29.png" width="700"></img>
+				<img src="lab4/foto30.png" width="700"></img>
+				<img src="lab4/foto31.png" width="700"></img>
+				<img src="lab4/foto32.png" width="700"></img>
+				<img src="lab4/foto33.png" width="700"></img>
+				<br>
+				<p><b>Caíque</b></p>
+				<img src="lab4/foto34.png" width="700"></img>
+				<img src="lab4/foto35.png" width="700"></img>
+				<img src="lab4/foto36.png" width="700"></img>
+				<img src="lab4/foto37.png" width="700"></img>
+				<img src="lab4/foto38.png" width="700"></img>
+				<img src="lab4/foto39.png" width="700"></img>
+				<br>
+			</div>
+			<p>
+			<hr>
+		</section>
+		
+		<section class="descricao2">
+			<br>
+			<audio src=lab4/audios/audio7.ogg controls autoplay></audio>
+			<h2>Reconstrução <span>Nível 1 Colorida</span></h2>
+			<br>
+			<div class="series">
+
+				<div class="series1">
+					<p><b>Matheus e Sâmya</b></p>
+					<img src="lab4/foto40.png" width="400"></img>
+					<img src="lab4/foto41.png" width="400"></img>
+					
+					<p><b>Mayara e Caíque</b></p>
+					<img src="lab4/foto42.png" width="400"></img>
+					<img src="lab4/foto43.png" width="400"></img>
+				</div>
+			</div>
+			<p>
+			<hr>
+		</section>
+
+		<section class="descricao2">
+			<br>
+			<audio src=lab4/.ogg controls autoplay></audio>
+			<p>
+			<h3>Após todos estes procedimentos, as aproximações foram salvas e o download dos arquivos tiveram êxito. Com isso, a taxa de compressão com o original foi calculada:</h3>
+				<br>
+				<h3>Do mesmo modo, o arquivo codificado DWT/IDWT nível 1 colorido foi gravado e, com isso, a taxa de compressão com o original tambpem foi calculada:</h3>
+			<p>
+			<hr>
+		</section>
+
+
+		<section class="descricao2">
+			<br>
+			<audio src=lab4/audios/audio8.ogg controls autoplay></audio>
+			<h2>Reconstrução da Imagem colorida e <span>Cálculo da MSE de cada plano de cor e da PSNR total</span></h2>
+			<br>
+			<div class="series">
+
+				<h3>Para encontrar detalhes dos códigos utilizados, acesse o link do notebook que está localizado no menu do lado esquerdo da tela.</h3>
+				<br>
+				<p><b>Matheus</b></p>
+				<h3>MSE_Red= 6.01e-25 <br>MSE_Green= 5.83e-25 <br>MSE_Blue= 4.96e-25
+				<br>PSNR total = 285.88 dB</h3>
+				<br>
+				<img src="lab4/foto44.png" width="700"></img>
+				<br>
+				<p><b>Sâmya</b></p>
+				<h3>MSE_Red= 4.74e-25 <br>MSE_Green= 4.04e-25 <br>MSE_Blue= 4.09e-25
+				<br>PSNR total = 287.03 dB</h3>
+				<br>
+				<img src="lab4/foto45.png" width="700"></img>
+				<br>
+				<p><b>Mayara</b></p>
+				<h3>MSE_Red= 1.54e-25 <br>MSE_Green= 8.55e-26 <br>MSE_Blue= 9.35e-26
+				<br>PSNR total = 292.90 dB</h3>
+				<br>
+				<img src="lab4/foto46.png" width="700"></img>
+				<br>
+				<p><b>Caíque</b></p>
+				<h3>MSE_Red= 6.47e-25 <br>MSE_Green= 5.13e-25 <br>MSE_Blue= 4.90e-25
+				<br>PSNR total = 285.96 dB</h3>
+				<br>
+				<img src="lab4/foto47.png" width="700"></img>
+				<br>
+			</div>
+			<p>
+			<hr>
+		</section>
+
+		<section class="doc">
+			<h2>Link do Notebook</h2>
+			<div class="img-avatar">
+				<p>	
+				<br>
+				<a href='https://colab.research.google.com/drive/1e1Ww4UGs_8yBdehwelgBX_NuAY2XyTZh' text-align: center>Clique aqui para o acesso</a><p>
+			</div>
+			<br>
+			<p>
+
+		</section>
+	
+
+	</div>
+
+</div>
+
+</body>
+</html>

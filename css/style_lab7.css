@@ -1,0 +1,185 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Saira Extra Condensed', sans-serif;
+}
+
+html, body{
+	height: 100%;
+}
+
+.parent{
+	display: flex;
+}
+
+.sidebar{
+	width: 20%;
+	height: 100%;
+	position: fixed;
+	background-color: #8B4513; 
+}
+
+.sidebar-pos{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+
+}
+
+.img-sidebar{text-align: center}
+
+.img-sidebar img{
+	width: 70%;
+	border: 6px solid #000000;
+	border-radius: 50%;
+	}
+
+.menu{
+	margin: 20px 0;
+	text-align: center;
+}
+
+.menu a{
+	color: #000000;
+	opacity: 0.4;
+	font-size: 20px;
+	display: block;
+	margin-bottom: 20px;
+	text-decoration: none;
+}
+
+.menu a.selected{
+	opacity: 1;
+
+}
+
+.content{
+	position: absolute;
+	left: 20%;
+	width: 80%;
+	height: 100%;
+	overflow-y: auto;
+	padding: 0 3%;
+}
+
+section.descricao{
+	position: relative;
+	top: 25%;
+	transform: translateY(-50%);
+}
+
+section.descricao h2{
+	color: #343a40;
+	font-size: 70px;
+}
+
+section.descricao h2 > span{
+	color: #8B4513;
+	font-size: 70px;
+}
+
+section.descricao h3{
+	margin: 15 px;
+	color: #6c757d;
+	font-size: 20px;
+}
+
+section.descricao p{
+	color: #6c757d;
+	font-size: 25px;
+	margin-top: 40px;
+}
+
+.img-avatar{text-align: center}
+
+.img-avatar img{
+	width: 40%;
+	
+}
+
+.img-avatar a{
+	color: #6c757d;
+	opacity: 0.6;
+	font-size: 20px;
+	display: block;
+	margin-bottom: 20px;
+	text-decoration: none;
+}
+
+section.descricao2{
+	position: relative;
+	top: 3%;
+	transform: translateY(-2%);
+}
+
+section.descricao2 h2{
+	color: #343a40;
+	font-size: 70px;
+}
+
+section.descricao2 h2 > span{
+	color: #8B4513;
+	font-size: 70px;
+}
+
+section.descricao2 h3{
+	margin: 15 px;
+	color: #6c757d;
+	font-size: 20px;
+}
+
+section.descricao2 p{
+	color: #6c757d;
+	font-size: 40px;
+	margin-top: 40px;
+	font-family: 'Saira Extra Condensed', sans-serif;
+}
+
+section.-descricao{
+	position: relative;
+	top: 40%;
+	transform: translateY(-50%);
+}
+
+section.-descricao h2{
+
+	color: #343a40;
+	font-size: 70px;
+}
+
+section.-descricao h2 > span{
+	color: #8B4513;
+	font-size: 70px;
+}
+
+section.-descricao p{
+	color: #6c757d;
+	font-size: 30px;
+	margin-top: 40px;
+}
+
+.series{
+	text-align: center
+	
+}
+.series1{
+	text-align: center
+	float: left;
+}
+
+section.doc{
+	position: relative;
+	top: 15%;
+	
+}
+
+section.doc h2{
+	color: #343a40;
+	font-size: 70px;
+}
+
+section.doc h2 > span{
+	color: #8B4513;
+	font-size: 70px;
+}
